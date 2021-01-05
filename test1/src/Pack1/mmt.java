@@ -11,17 +11,11 @@ public class mmt {
 	public static void main(String[] args) {
 		System.setProperty("webdriver.chrome.driver", "../test1/chromedriver.exe");
 		ChromeDriver driver = new ChromeDriver();
-		driver.get("https://www.makemytrip.com/");
+		driver.get("https://www.youtube.com/");
 		driver.manage().window().maximize();
-		
-		WebElement city = driver.findElement(By.className("react-autosuggest__input react-autosuggest__input--open"));
-		city.click();
-		
-		for (int i=0;i<5;i++)
-		{
-			city.sendKeys(Keys.ARROW_DOWN);
-		}
-		city.sendKeys(Keys.ENTER);
+				
+		driver.findElement(By.className("")).sendKeys(Keys.ENTER);;
+			
 		
 	}
 
